@@ -1,0 +1,111 @@
+/* 版权信息 */
+.copy-wrapper{
+    height: 245px;
+    background: #ffffff;
+}
+.copy{
+    height: 245px;
+    background: #ffffff;
+}
+.copy-up{
+    height: 142px;
+    border-bottom: 1px solid #ededed;
+}
+.copy-up ul{
+    padding-left: 40px;
+}
+.copy-up ul li{
+    float: left;
+}
+.c-box{
+    display: block;
+    position: relative;
+    padding-top: 50px;
+    width: 150px;
+    height: 69px;
+}
+.c-box img{
+    position: absolute;
+    left: 50px;
+    width: 50px;
+    height: 39px;
+}
+.c-box span{
+    display: block;
+    color: #999;
+    margin-top: 50px;
+    text-align: center;
+}
+.up-r{
+    display: block;
+    float: right;
+    padding-top: 30px;
+    position: relative;
+    height: 100px;
+}
+.up-r .time{
+    display: block;
+    color: #999;
+    text-align: right;
+    font-size: 12px;
+}
+.up-r .tel{
+    display: block;
+    color: #00c3f5;
+    font-size: 25px;
+    margin: 10px 0;
+}
+.up-r a{
+    display: inline-block;
+    height: 30px;
+    padding: 0 16px;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    border-radius: 20px;
+    margin-top: 3px;
+    font-size: 14px;
+    background: #0bbbef;
+}
+
+.copy-top ul{
+    margin-top: 30px;
+}
+.copy-top ul li{
+    float: left;
+}
+.copy-top ul li a{
+    font-size: 12px;
+    color: #999;
+}
+.copy-top ul li i{
+    font-size: 16px;
+    color: #999;
+    margin: 0 15px;
+}
+.chinese img{
+    width: 16px;
+    height: 16px;
+}
+.top-x-l p{
+    float: left;
+    width: 1000px;
+    margin-top: 20px;
+    color: #999;
+}
+.top-x-l p a{
+    margin: 0 8px;
+    color: #999;
+}
+.top-x-r{
+    float: right;
+    margin-top: -20px;
+}
+.top-x-r img{
+    width: 21px;
+    height: 18px;
+    margin: 0 10px;
+}
