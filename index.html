@@ -8,6 +8,8 @@
     <link rel="stylesheet" type="text/css" href="css/home.css"/>
     <link rel="stylesheet" type="text/css" href="css/reset.css"/>
     <link rel="stylesheet" type="text/css" href="css/copy.css">
+    <link rel="stylesheet" href="dist/css/swiper.min.css">
+    <script src="dist/js/swiper.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
 </head>
 <body>
@@ -60,40 +62,20 @@
                 <a href="shop_car.html" class="shop_car"></a>
             </section>
         </section>
-        
         <!-- 轮播图 -->
-        <ul class="swiper-container">
-            <li style="background: url(images/index/banner1.jpg) no-repeat center center; background-size: cover;">
-                <a href="#" target="blank"></a>
-            </li>
-            <li style="background: url(images/index/banner2.jpg) no-repeat center center; background-size: cover;">
-                <a href="#" target="blank"></a>
-            </li>
-            <li style="background: url(images/index/banner3.jpg) no-repeat center center; background-size: cover;">
-                <a href="#" target="blank"></a>
-            </li>
-            <li style="background: url(images/index/banner4.jpg) no-repeat center center; background-size: cover;">
-                <a href="#" target="blank"></a>
-            </li>
-            <li style="background: url(images/index/banner5.jpg) no-repeat center center; background-size: cover;">
-                <a href="#" target="blank"></a>
-            </li>
-            <li style="background: url(images/index/banner6.jpg) no-repeat center center; background-size: cover;">
-                <a href="#" target="blank"></a>
-            </li>
-            <li style="background: url(images/index/banner7.jpg) no-repeat center center; background-size: cover;">
-                <a href="#" target="blank"></a>
-            </li>
-        </ul>
-        <!-- 小圆点 -->
-        <div class="dot_div">
-	    	<span class="on"></span>
-            <span></span> 
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-		</div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><a href="#" target="blank"><img src="images/index/banner1.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href="#" target="blank"></a><img src="images/index/banner2.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href="#" target="blank"></a><img src="images/index/banner3.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href="#" target="blank"></a><img src="images/index/banner4.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href="#" target="blank"></a><img src="images/index/banner5.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href="#" target="blank"></a><img src="images/index/banner6.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href="#" target="blank"></a><img src="images/index/banner7.jpg" alt=""></a></div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
     </header>
     <!--首页主体部分 -->
     <div class="main">
@@ -965,4 +947,13 @@
         </div>
     </div>
 </body>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            loop:true,
+            pagination: {
+            el: '.swiper-pagination',
+            clickable :true, 
+            },
+        });
+    </script>
 </html>
