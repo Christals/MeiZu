@@ -1,31 +1,30 @@
+.container{
+    width: 1240px;
+    margin: auto
+}
+body{
+    background: #f4f4f4;
+}
 /* 头部 */
 #header{
     height:670px;
     position: relative;
-    /* height:80px; */
-    border-bottom: 1px solid #efefef;
-}
-.container{
-    width:1240px;
-    margin:0 auto;
+    overflow: hidden;
 }
 /* 导航 */
 .header_inner{
+    height: 82px;
     position: absolute;
-    top:0;
-    left: 50%;
-    transform:translateX(-50%);
-    height: 80px;
-    z-index: 20;
+    top: 0;
+    z-index: 11;
 }
 .logo{
 	width: 125px;
 	height: 24px;
-    background:url(../images/logo_on.png) no-repeat; 
-    background-size: 100% 100%;
+	background:url(../images/index/logo.jpg) no-repeat;
 	float: left;
-    margin: 28px 0;
-    /* fill: #fff; */
+    margin-top: 29px;
+    margin-left: 20px;
 }
 .logo a{
 	display: block;
@@ -33,14 +32,13 @@
 	width: 125px;
 	text-indent: -9999px;
 }
-/* 导航 */
 .nav{
     float: left;
     margin-left: 186px;
 }
 .nav ul li{
     float: left;
-    line-height: 80px;
+    line-height: 82px;
 }
 .nav ul li a{
     margin:0 20px;
@@ -51,47 +49,8 @@
 }
 .r_header{
     float: left;
-    margin-left: 19px;
+    margin-left: 10px;
 }
-/* 二级导航 */
-.sub_navigation{
-    position: absolute; 
-    top:80px;
-    left: 50%;
-    transform:translateX(-50%);
-    z-index: 20;
-    background-color: #fff;
-    width: 100%;
-}
-.sub_wrap ul{
-    padding: 5px 0 20px;
-    margin: 0;
-    text-align: center;
-    font-size: 12px;
-} 
-.sub_wrap ul li{
-    float: left;
-    color:#333;
-    padding:5px 5px 20px;
-    width:142px;
-    height: 140px;
-    text-align: center;
-}
-.sub_wrap ul li a{
-    width:142px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: block;
-    font-size: 12px;
-}
-.sub_wrap ul li a i{
-    display: block;
-    width:120px;
-    height: 120px;
-    
-}
-/*搜索*/
 .search{
     float: left;
     width:170px;
@@ -139,53 +98,14 @@ input::-webkit-input-placeholder{
     background:url(../images/index/shop_car.png) no-repeat ;
 }
 /* 轮播图 */
-.swiper_banner,.swiper_banner li{
-    width: 100%; 
-    height:670px;
-    overflow: hidden; 
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity:1;
-} 
-
-.swiper_banner li a{ 
-    display: block;
-    width: 100%; 
-    position: absolute; 
-    height: 100%; 
-    top: 0; 
-}
-
-/* .swiper_banner li a img{
-    width:100%;
+.swiper-container {
+    width: 100%;
+    height: 670px;
+  }
+.swiper-container img{
+    width: 100% !important;
     height: 100%;
-} */
-/* 小圆点 */
-.dot_div{ 
-    position: absolute; 
-    bottom:32px; 
-    width: 100%; 
-    text-align: center; 
-    left: 0; 
-    z-index: 30;
-    height: 16px;
-}
-.dot_div span{ 
-    display: inline-block;
-    width: 8px; 
-    height: 8px; 
-    background: #fff; 
-    margin: 0 8px; 
-    border-radius: 4px;
-    -webkit-border-radius:4px;
-    -moz-border-radius:4px;
-}
- .dot_div span.on{ 
-    background: #00578a;
-} 
-
-
+  }
 /* 主体部分 */
 .index-main {
     background: #f4f4f4;
