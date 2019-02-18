@@ -29,14 +29,15 @@
     $pwd = $json -> paserward;
 
     $coon = new Mysqli("localhost", "root", "123456", "db_shop_admin", 3306);
-    $sql = "select * from u ser_info where username='$username'and paserward=$pwd";
-
+    $sql = "select * from user_info where username='$username'and paserward='$pwd'";
     $coon->query("SET CHARACTER SET 'utf8'");//读库   
     $coon->query("SET NAMES 'utf8'");//写库  
+    // var_dump($sql); 
     $row = $coon -> query($sql);
     $result = $row -> fetch_assoc();
+    // var_dump($row); 
+
     // $result = $coon -> query($sql);
-    //var_dump($result); 
     if($result) {
         // 登录成功
         $arr = array("code" => "200", "msg" => "", "data" => array("name" => $result['username']));

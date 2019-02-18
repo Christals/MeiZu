@@ -1,8 +1,8 @@
 /*头部*/
 #header{
     height:80px;
-    background-color:#ffff;
     border-bottom: 1px solid #efefef;
+    background: #fff;
 }
 .container{
     width:1240px;
