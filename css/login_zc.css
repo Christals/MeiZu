@@ -22,12 +22,17 @@
 	height: 750px;
 	background-color: #edfafc;
 }
-.banner{
+.login_banner{
 	position: relative;
 	height: 750px;
 	background: url(../images/login/denglu_01.jpg) no-repeat center;
 }
-.zhuce{
+.zc_banner{
+	position: relative;
+	height: 750px;
+	background: url(../images/login/zhuce_03.jpg) no-repeat center;
+}
+.login{
 	padding: 0 34px 0 34px;
 	position: absolute;
 	height: 318px;
@@ -38,19 +43,39 @@
 	text-align: center;
 	box-sizing: border-box;
 }
-.zhuce h1{
+.zhuce{
+	padding: 0 34px 0 34px;
+	position: absolute;
+	height: 518px;
+	width: 370px;
+	background-color: #ffffff;
+	right:86px;
+	top: 119px;
+	text-align: center;
+	box-sizing: border-box;
+}
+.login h1{
 	margin-top: 74px;
 	margin-bottom: 46px;	
 }
-.zhuce a {
+.zhuce h1{
+	margin-top: 76px;
+	margin-bottom: 102px;	
+}
+.login a,.zhuce a  {
 	font-size: 11px;
 }
-.zhuce h1 a{
+.login h1 a{
 	color: #515151;	
 	font-size: 16px;
 	font-weight: 900;
 }
-.zhuce .txt{
+.zhuce h1 a{
+	color: #387aff;
+	font-size: 16px;
+	font-weight: 900;
+}
+.login .txt,.zhuce .txt{
 	height: 46px;
 	width: 300px;
 	border: 1px #dadada solid;
@@ -58,7 +83,14 @@
 	font-size: 12px;
 	margin-bottom: 36px;
 }
-#btn{
+.btn{
+	margin-bottom: 30px;
+	height: 42px;
+	width: 300px;
+	background-color: #f6f6f6;
+	border: 1px #cccccc solid;
+}
+#btn_login{
 	height: 46px;
 	width: 300px;
 	background-color:#387aff;
@@ -68,7 +100,17 @@
 	border: none;
 	margin-bottom: 15px;
 }
-.login{
+#btn_zc{
+	height: 46px;
+	width: 300px;
+	background-color:#387aff;
+	border-radius: 5px;
+	color: #ffffff;
+	font-weight: 900;
+	border: none;
+	margin-bottom: 24px;
+}
+.login_btn{
 	color: #387aff;
 	float: left;
 }
