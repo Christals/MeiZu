@@ -1,4 +1,5 @@
-function move(ele, attr, target, time=1000, callback) {
+function move(ele, attr, target, time, callback) {
+    time=1000;
     var obj = ele;
     // clearInterval(ele.timer);
     if(typeof ele == 'string') {
