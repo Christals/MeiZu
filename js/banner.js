@@ -9,7 +9,7 @@ var wrapper=(function(){
             //获取所有banner图片
             $imgLi =$imgBox.children;
             //给每个banner图片层级样式
-            for (let i = 0; i < $imgLi.length; i++) {
+            for (var i = 0; i < $imgLi.length; i++) {
                 $imgLi[0].style.zIndex = 1;
                 $imgLi[i].style.zIndex = 0;
             }
@@ -17,7 +17,7 @@ var wrapper=(function(){
             $tipBox=$imgBox.nextElementSibling;
             $tipLi =$tipBox.children;
             //给每个小圆点加上index属性
-            for (let i = 0; i < $tipLi.length; i++) {
+            for (var i = 0; i < $tipLi.length; i++) {
                 $tipLi[i].index = i ;
             }
             //获取和克隆第一张和最后一张
@@ -49,10 +49,10 @@ var wrapper=(function(){
                 index = 0;
                 // $imgLi[index].style.zIndex = $imgLi.length -1;
             }
-            for (let i = 0; i < $tipLi.length; i++) {
+            for (var i = 0; i < $tipLi.length; i++) {
                 $tipLi[i].classList.remove('on');
             }
-            for (let i = 0; i < $imgLi.length; i++) {
+            for (var i = 0; i < $imgLi.length; i++) {
                 $imgLi[i].style.zIndex = 0;
             }
             $tipLi[index].classList.add('on');
