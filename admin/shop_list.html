@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物车</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/shop_car.css" />
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <link rel="stylesheet" type="text/css" href="css/shop_list.css" />
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header id="header">
+        <section class="header_inner container">
+            <section class="logo">
+                <h1>
+                    <a href="index.html" title="魅族">魅族</a>
+                </h1>
+            </section>
+            <ul class="bread">
+                <li class="arrow on">购物车</li>
+                <li class="arrow">确认订单</li>
+                <li class="arrow">在线支付</li>
+                <li>完成</li>
+            </ul>
+            <ul class="cart_category">
+                <li><a href="#" target="_blank">我的订单</a></li>
+                <li><a href="login.html" target="_blank">登录</a></li>
+                <li><a href="zhuce.html" target="_blank">注册</a></li>
+            </ul>
+        </section>
+    </header>
+    <!-- 主体部分 -->
+    <main id="main">
+        <div class="container">
+            <div class="cart" id="cart">
+                <div class="cart-login-tips" id="cartLoginTips">
+                    <i class="cart-login-tips-icon"></i>
+                    您还没有登录！登录后可显示您账号中已加入的商品哦~
+                    <a class="mz-btn s success" href="javascript:void(0);" data-mdesc="登录提示"
+                        data-mtype="store_cart_tip_login" data-bh="click_store_cart_tip_login">
+                        去登录
+                    </a>
+                    <div class="close-tips" id="closeTips"></div>
+                </div>
+
+                <div class="mzcontainer">
+                    <table class="cart-header">
+                        <tr>
+                            <td class="cart-col-select">
+                                <div class="cart-select-all JSelectAll" data-mdesc="全选按钮" data-mtype="store_cart_all"
+                                    data-bh="click_store_cart_all">
+                                    <div class="mz-checkbox"></div>
+                                    <span class="cart-select-title">全选</span>
+                                </div>
+                            </td>
+                            <td class="cart-col-price">单价(元)</td>
+                            <td class="cart-col-number">数量</td>
+                            <td class="cart-col-total">小计(元)</td>
+                            <td class="cart-col-ctrl" id="J-cartHearCtrl">编辑</td>
+                        </tr>
+                    </table>
+                    <ul class="cart-merchant-list" id="merchantList"></ul>
+                </div>
+
+                <div class="cart-main" id="cartMain">
+                    <div class="mzcontainer">
+                        <ul>
+                            <li>
+                                <table class="cart_body">
+                                    <tr class="cart-more-buy">
+                                        <td class="cart-product-buy" colspan="5">
+                                            <div class="more-buy-tag">
+                                                <span>加价购</span>
+                                            </div>
+                                            <span class="more-buy-tips">另外再加15元起，即可换购超值商品</span>
+                                            <span class="more-buy-skip" data-mdesc="换购超值商品"
+                                                data-mtype="click_click_store_cart_redem_choose"
+                                                data-bh="click_click_store_cart_redem_choose">立即加购 &gt;</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="cart-product hasTheBinder">
+                                        <td class="cart-col-select" <="" td="">
+
+                                            <div class="mz-checkbox"></div>
+
+                                            <a href="//detail.meizu.com/item/meizux8.html?skuId=10038"
+                                                class="cart-product-link" target="_blank" data-mdesc="购物车商品位"
+                                                data-mtype="click_store_cart_prod" data-bh="click_store_cart_prod">
+                                                <img data-original="//openfile.meizu.com/group1/M00/06/A8/Cgbj0FusSJyACGwcAAg0epdui5o951.png@120x120.png"
+                                                    class="cart-product-img" alt="魅族 X8"
+                                                    src="//openfile.meizu.com/group1/M00/06/A8/Cgbj0FusSJyACGwcAAg0epdui5o951.png@120x120.png"
+                                                    style="display: inline;">
+                                            </a>
+                                            <a href="//detail.meizu.com/item/meizux8.html?skuId=10038"
+                                                class="cart-product-link cart-product-info" target="_blank"
+                                                data-mdesc="购物车商品位" data-mtype="click_store_cart_prod"
+                                                data-bh="click_store_cart_prod">
+                                                <p class="cart-product-item-name">魅族 X8</p>
+
+                                                <p class="cart-product-desc">全网通公开版 玉白 4+64GB</p>
+                                            </a>
+                                        </td>
+                                        <td class="cart-col-price">
+                                            <p>
+                                                <span class="cart-product-price">1298.00</span>
+
+                                            </p>
+
+                                        </td>
+                                        <td class="cart-col-number">
+
+                                            <div class="cart-product-number-adder">
+                                                <p class="cart-product-number-max show">
+
+                                                </p>
+                                                <div class="mz-adder">
+                                                    <button class="mz-adder-subtract disabled"></button>
+                                                    <div class="mz-adder-num"><input type="text" class="mz-adder-input"
+                                                            value="1"></div>
+                                                    <button class="mz-adder-add"></button>
+                                                </div>
+                                            </div>
+
+                                        </td>
+                                        <td class="cart-col-total">
+                                            <span class="cart-product-price total main-goods">1298.00</span>
+                                        </td>
+                                        <td class="cart-col-ctrl">
+                                            <div class="cart-product-remove " data-mdesc="删除单个商品按钮"
+                                                data-mtype="click_store_cart_del" data-bh="click_store_cart_del"></div>
+                                        </td>
+                                    </tr>
+                                    <tr class="cart-product ">
+                                        <td class="cart-col-select" <="" td="">
+
+                                            <div class="mz-checkbox"></div>
+
+                                            <a href="//detail.meizu.com/item/kumamon.html?skuId=6821"
+                                                class="cart-product-link" target="_blank" data-mdesc="购物车商品位"
+                                                data-mtype="click_store_cart_prod" data-bh="click_store_cart_prod">
+                                                <img data-original="//openfile.meizu.com/group1/M00/03/59/Cgbj0Vqwv3SAKEs9AAeZO9uMlbg447.png@120x120.png"
+                                                    class="cart-product-img" alt="Everyday 乐游系列 酷 MA 萌定制版"
+                                                    src="//openfile.meizu.com/group1/M00/03/59/Cgbj0Vqwv3SAKEs9AAeZO9uMlbg447.png@120x120.png"
+                                                    style="display: inline;">
+                                            </a>
+                                            <a href="//detail.meizu.com/item/kumamon.html?skuId=6821"
+                                                class="cart-product-link cart-product-info" target="_blank"
+                                                data-mdesc="购物车商品位" data-mtype="click_store_cart_prod"
+                                                data-bh="click_store_cart_prod">
+                                                <p class="cart-product-item-name">Everyday 乐游系列 酷 MA 萌定制版</p>
+
+                                                <p class="cart-product-desc">黑色</p>
+                                            </a>
+                                        </td>
+                                        <td class="cart-col-price">
+                                            <p>
+                                                <span class="cart-product-price">599.00</span>
+
+                                            </p>
+
+                                        </td>
+                                        <td class="cart-col-number">
+
+                                            <div class="cart-product-number-adder">
+                                                <p class="cart-product-number-max show">
+
+                                                </p>
+                                                <div class="mz-adder">
+                                                    <button class="mz-adder-subtract disabled"></button>
+                                                    <div class="mz-adder-num"><input type="text" class="mz-adder-input"
+                                                            value="1"></div>
+                                                    <button class="mz-adder-add"></button>
+                                                </div>
+                                            </div>
+
+                                        </td>
+                                        <td class="cart-col-total">
+                                            <span class="cart-product-price total main-goods">599.00</span>
+                                        </td>
+                                        <td class="cart-col-ctrl">
+                                            <div class="cart-product-remove " data-mdesc="删除单个商品按钮"
+                                                data-mtype="click_store_cart_del" data-bh="click_store_cart_del"></div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="cart-footer" id="cartFooter">
+                    <div class="mzcontainer">
+                        <div class="cart-footer-left">
+                            <div class="cart-select-all JSelectAll" data-mdesc="全选按钮" data-mtype="store_cart_all"
+                                data-bh="click_store_cart_all">
+                                <div class="mz-checkbox"></div>
+                                <span class="cart-select-title">全选</span>
+                            </div>
+                            <span class="cart-remove-selected" data-mdesc="删除选中商品" data-mtype="store_cart_batch"
+                                data-bh="click_store_cart_batch" id="removeSelected">删除选中的商品</span>
+                            <span class="cart-footer-count">
+                                共<span class="cart-footer-num" id="totalCount">0</span>件商品，
+                                已选择<span class="cart-footer-num blue" id="totalSelectedCount">0</span>件
+                            </span>
+                        </div>
+                        <div class="cart-footer-right">
+                            <span class="cart-footer-sum">
+                                已优惠<span class="cart-footer-num red" id="totalDiscount">0.00</span>元，
+                                合计(不含运费)：<span class="cart-footer-total" id="totalPrice">0.00</span>
+                            </span>
+                            <div class="mz-btn success to-order-btn" disabled="disabled" id="cartSubmit"
+                                data-mdesc="去结算按钮" data-mtype="store_cart_checkout" data-bh="click_store_cart_checkout">
+                                去结算
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <!-- 底部 -->
+    <div class="copy-wrapper">
+        <div class="copy container">
+            <div class="copy-up">
+                <ul>
+                    <li class="c-box">
+                        <a href="#">
+                            <img src="images/copy-icon01.png">
+                            <span>满80免运费</span>
+                        </a>
+                    </li>
+                    <li class="c-box">
+                        <a href="#">
+                            <img src="images/copy-icon02.png">
+                            <span>100+ 城市次日送达</span>
+                        </a>
+                    </li>
+                    <li class="c-box">
+                        <a href="#">
+                            <img src="images/copy-icon03.png">
+                            <span>7天无理由退换货</span>
+                        </a>
+                    </li>
+                    <li class="c-box">
+                        <a href="#">
+                            <img src="images/copy-icon04.png">
+                            <span>15天换货保障</span>
+                        </a>
+                    </li>
+                    <li class="c-box">
+                        <a href="#">
+                            <img src="images/copy-icon05.png">
+                            <span>1年免费保修</span>
+                        </a>
+                    </li>
+                    <li class="c-box">
+                        <a href="#">
+                            <img src="images/copy-icon06.png">
+                            <span>上门维修</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="up-r">
+                    <span class="time">周一至周六7:00-24:00</span>
+                    <span class="tel">400-788-33333</span>
+                    <a href="#">在线客服</a>
+                </div>
+            </div>
+            <div class="copy-top">
+                <ul class="clearfix">
+                    <li class="c-link">
+                        <a href="#">了解魅族</a> <i>|</i>
+                    </li>
+                    <li class="c-link">
+                        <a href="#">加入我们</a> <i>|</i>
+                    </li>
+                    <li class="c-link">
+                        <a href="#">联系我们</a> <i>|</i>
+                    </li>
+                    <li class="c-link">
+                        <a href="#">Flyme</a> <i>|</i>
+                    </li>
+                    <li class="c-link">
+                        <a href="#">魅族社区</a> <i>|</i>
+                    </li>
+                    <li class="c-link">
+                        <a href="#">天猫旗舰店</a> <i>|</i>
+                    </li>
+                    <li class="c-link">
+                        <a href="#">魅族反馈</a> <i>|</i>
+                    </li>
+                    <li class="c-link">
+                        <a href="#">线上销售授权名单公示</a> <i>|</i>
+                    </li>
+                    <li class="c-link">
+                        <a href="#">出版物许可证</a> <i>|</i>
+                    </li>
+                    <li class="chinese">
+                        <img src="images/fc-icon01.png">
+                        <a href="#">简体中文</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="top-x-l">
+                <p>
+                    ©2019 Meizu Telecom Equipment Co., Ltd. All rights reserved.&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="">粤ICP备13003602号</a>
+                    <a href="">合字B2-20170010</a>
+                    <a href="#">营业执照</a>
+                    <a href="#">法律声明</a>
+                    <i> <img src="images/fc-icon02.jpg">粤公网安备 44049102496009 号 </p></i>
+                </p>
+                <div class="top-x-r">
+                    <a href="#"><img src="images/fc-icon04.png"></a>
+                    <a href="#"><img src="images/fc-icon05.png"></a>
+                    <a href="#"><img src="images/fc-icon06.png"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

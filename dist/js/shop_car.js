@@ -1,0 +1,1 @@
+"use strict";var shop_car={init:function(){this.getJson(),this.event()},event:function(){},getJson:function(){var t=localStorage.shopList||"[]";t=JSON.parse(t),this.insertData(t)},insertData:function(t){console.log(t)},setData:function(){}};shop_car.init();
