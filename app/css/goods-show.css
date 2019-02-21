@@ -67,7 +67,7 @@ body{
     position: relative;
     width: 400px;
     height: 555px;
-    background: #ffffff;
+    background: #ffff;
 }
 .list01 img{
     padding-top: 70px;
@@ -140,35 +140,84 @@ body{
 }
 /* 为您推荐 */
 .recomment{
-    min-height: 490px;
+    height: 490px;
+    position: relative;
+    overflow: hidden;
+}
+.recomment_box{
+    height: 429px;
+    width: 9999px;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+.recomment ul{
+    float: left; 
 }
 .recomment ul li{
     float: left;
 }
 .com-box{
+    position: relative;
     display: block;
     background: #ffff;
     width: 310px;
     height: 429px;
+    text-align: center;
 }
 .com-box img{
+    position:absolute;
     display: block;
     width: 230px;
     height: 230px;
-    padding-top: 63px;
-    padding-left: 40px;
+    top: 63px;
+    left: 40px;
+}
+.com-box a:hover img {
+    width: 250px;
+    height: 250px;
+    top: 43px;
+    left: 20px;
 }
 .com-name{
+    position: absolute;
     display: block;
     font-size: 23px;
-    margin-top: 40px;
+    top: 310px;
+    left: 100px;
     color: #333;
     text-align: center;
 }
 .com-price{
     display:block;
+    position: absolute;
     text-align: center;
-    margin-top: 10px;
+    top: 350px;
+    left: 100px;
     color: #c00;
     font-size: 22px;
 }
+.recomment .dot_div{ 
+    position: absolute; 
+    bottom:32px; 
+    width: 100%; 
+    text-align: center; 
+    left: 0; 
+    z-index: 30;
+    height: 13px;
+}
+.recomment .dot_div span{ 
+    display: inline-block;
+    width: 11px; 
+    height: 11px; 
+    background: #fff; 
+    border: 1px solid #a1a1a1;
+    margin: 0 8px; 
+    border-radius: 50%;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+}
+.recomment .dot_div span.on{ 
+    background: #a1a1a1;
+} 
+
