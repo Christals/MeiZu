@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/login_zc.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css" />
+</head>
+
+<body>
+    <section class="header container">
+        <div class="logo">
+            <h1><a href="index.html">魅族</a></h1>
+        </div>
+    </section>
+    <section class="banner_wrap">
+        <section class="login_banner container">
+            <div class="login">
+                <h1><a href="#">密码登录</a></h1>
+                <form id="form" autocomplete="on" onsubmit="return false">
+                    <div class="form-group">
+                        <input type="text" name="username" class="txt" placeholder="请输入用户名" data-error="需要输入6-13位的字母或者下划线">
+                        <p class=""></p>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="paserward" class="txt" placeholder="请输入密码" data-error="密码格式不正确">
+                        <p class=""></p>
+                    </div>
+                    <button id="btn_login">登陆</button>
+                </form>
+                <a href="zhuce.html" class="login_btn">注册</a>
+                <a href="#" class="paserward">忘记密码?</a>
+            </div>
+        </section>
+        <section class="footer_wrap">
+            <section class="footer container">
+                <div class="footer-t">
+                    <a href="#">关于魅族</a>&nbsp;&nbsp;|&nbsp;
+                    <a href="#">工作机会</a>&nbsp;&nbsp;|&nbsp;
+                    <a href="#">联系我们</a>&nbsp;&nbsp;|&nbsp;
+                    <a href="#">法律生明</a>&nbsp;&nbsp;|&nbsp;
+                    <a href="#">常见问题</a>&nbsp;&nbsp;|&nbsp;
+                    <a href="#">简体中文</a>
+                </div>
+                <div class="footer-sevice">
+                    <span class="service-label">客服热线</span>&nbsp&nbsp&nbsp&nbsp
+                    <span class="service-num">400-788-3333</span>&nbsp&nbsp&nbsp&nbsp
+                    <a id="service-online" class="service-online" href="javascript:void(0);" title="在线客服">在线客服</a>
+                </div>
+                <div class="footer-r">
+                    <a href=""><i class="iconfont icon-weibo"></i></a>
+                    <a href=""><i class="iconfont icon-weixin"></i></a>
+                    <a href=""><i class="iconfont icon-kongjian"></i></a>
+                </div>
+                <div class="footer-l">
+                    <span>©2019 Meizu Telecom Equipment Co., Ltd. All rights reserved.</span>
+                    <span><a href="#">备案号: 粤ICP备13003602号-4</a></span>
+                    <span><a href="#">粤B2-20130198</a></span>
+                    <span><a href="">营业执照</a></span>
+                    <!-- <span><a href=""><img src="images/login/ghs.png" />粤公网安备 44049102496076号</a></span> -->
+                </div>
+            </section>
+        </section>
+    </section>
+    <script src="js/verify.js"></script>
+    <script src="js/ajax.js"></script>
+    <script>
+        var $form = document.querySelector('#form');
+        var $btn = document.querySelector('#btn_login');
+        $btn.onclick = function(e) {
+            e = e ||window.event;
+            e.preventDefault();
+            sendAjax('../admin/login.php', {
+                type: 'POST',
+                data: {
+                    username: $form['username'].value,
+                    paserward: $form['paserward'].value
+                },
+                success(data) {
+                    // console.log(data);
+                    // 如果控制台报错, 
+                    // Unexpected token < in JSON at position 0
+                    // 说明data不是一个json字符串, 说明后台返回的数据有问题
+                    // let {code , msg, data:_data} = JSON.parse(data);
+                    // if(code == 200) {
+                    //     var username = _data.name;
+                    //     location.href  = 'manager.html';
+                    // } else {
+                    //     alert(msg);
+                    // }
+                    data = JSON.parse(data);
+                    // console.log(data);
+                    if(data.code == 200) {
+                        var username = data.data.name;
+                        localStorage.name = username;
+                         location.href = 'manager.html';
+                        //  console.log(username)
+                        
+                    } else {
+                        alert(data.msg);
+                    }
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>
