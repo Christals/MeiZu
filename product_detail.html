@@ -6,6 +6,7 @@
 		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
 		<link rel="stylesheet" type="text/css" href="css/common.css"/>
 		<link rel="stylesheet" type="text/css" href="css/product_detail.css"/>
+		
 	</head>
 	<body>
 		<!--头部-->
@@ -49,9 +50,53 @@
 	            </nav>
 	            <section class="r_header">
 	                <form class="search">
-	                    <input type="text" class="inp" placeholder="魅族 16th"/>
-	                    <input type="submit" class="btn" value=""/>
-	                </form>
+						<input type="text" class="inp" placeholder="魅族 16th"/>
+						<input type="submit" class="btn" value=""/>
+						<div class="mz-menu">
+							<ul class="menu-list">
+									<li class="menu-item" tabindex="-1">
+									<span class="menu-name" title="魅族 Note8">魅族 Note8</span>
+									<span class="menu-num">约 3 种</span>
+									</li>
+									
+									<li class="menu-item" tabindex="-1">
+									<span class="menu-name" title="16X">16X</span>
+									<span class="menu-num">约 3 种</span>
+									</li>
+									
+									<li class="menu-item" tabindex="-1">
+									<span class="menu-name" title="魅族 X8">魅族 X8</span>
+									<span class="menu-num">约 3 种</span>
+									</li>
+									
+									<li class="menu-item" tabindex="-1">
+									<span class="menu-name" title="魅族 V8">魅族 V8</span>
+									<span class="menu-num">约 4 种</span>
+									</li>
+									
+									<li class="menu-item" tabindex="-1">
+									<span class="menu-name" title="耳机">耳机</span>
+									<span class="menu-num">约 14 种</span>
+									</li>
+									
+									<li class="menu-item" tabindex="-1">
+									<span class="menu-name" title="蓝牙 耳机">蓝牙 耳机</span>
+									<span class="menu-num">约 6 种</span>
+									</li>
+									
+									<li class="menu-item" tabindex="-1">
+									<span class="menu-name" title="魅族 16th">魅族 16th</span>
+									<span class="menu-num">约 6 种</span>
+									</li>
+									
+									<li class="menu-item" tabindex="-1">
+									<span class="menu-name" title="移动电源">移动电源</span>
+									<span class="menu-num">约 1 种</span>
+									</li>	
+						  </ul>
+						  </div>
+					</form>
+					
 	                <a href="login.html" class="login"></a>
 	                <a href="shop_car.html" class="shop_car"></a>
 	            </section>
@@ -111,16 +156,13 @@
 						<!--春节不打烊-->
 						<div class="notice">
 							<span class="name indent">春节不打烊</span>
-							<div class="clock">
-								<span class="lable">剩余</span>
-								<span class="num">5</span>
-								<span class="lable">:</span>
-								<span class="num">1</span>
-								<span class="num">4</span>
-								<span class="lable">:</span>
-								<span class="num">5</span>
-								<span class="num">6</span>
-							</div>
+							<ul class="countdown">
+								<li>00</li>
+								<li class="lable">:</li>
+								<li>00</li>
+								<li class="lable">:</li>
+								<li>00</li>
+							</ul>
 						</div>
 						<!--价格-->
 						<div class="price">
@@ -421,5 +463,9 @@
 				</div>
 			</div>
 		</div>
+		<script src="js/countdown.js"></script>
+		<script>
+			countDown.init('.notice');
+		</script>
 	</body>
 </html>

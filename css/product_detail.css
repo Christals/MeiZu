@@ -1,3 +1,23 @@
+/* 头部搜索列表 */
+.mz-menu{
+	display: none;
+	width: 170px;
+	height: 200px;
+	border: 1px solid #d9d9d9;
+}
+.menu-item{
+	height: 25px;
+    padding: 0 15px;
+    overflow: hidden;
+	line-height: 25px;
+	box-sizing: border-box;
+}
+.menu-name{
+	margin-right: 30px;
+}
+.menu-item:hover{
+	background: #999;
+}
 /*产品名称*/
 #category{
 	height: 69px;
@@ -95,25 +115,15 @@
 	font-size: 16px;
 	line-height: 42px;
 }
-.clock{
-	float: right;
-	line-height: 42px;
+.countdown{
+	margin-left:400px;
+	padding-top: 12px;
+	padding-left: 30px;
 }
-.clock .num{
-	display: inline-block;
-	width:16px;
-	height: 20px;
-	line-height: 20px;
-	background: #fff;
-	font-size:10px;
-	color:#f51853;
-	text-align: center;
-}
-.clock span:nth-child(2){
-	margin-left: 10px;
-}
-.clock span:last-child{
-	margin-right: 10px;
+.countdown li{
+	display: inline;
+	padding-top: 12px;
+	padding-left: 10px;
 }
 /*产品价格*/
 .price{
