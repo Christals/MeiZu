@@ -19,6 +19,10 @@
 	background: #999;
 }
 /*产品名称*/
+.cate_opacity{
+	width:100%;
+	opacity: 0.9;
+}
 #category{
 	height: 69px;
 	border-bottom: 1px solid #efefef;
@@ -268,6 +272,10 @@
 	margin: 0 10px 10px 0;
 	background: #fff;
 }
+.buy_bottom dd .selected{
+	border-color: #000;
+    color: #000;
+}
 .pro_color dd img{
 	width:32px;
 	height: 32px;
@@ -300,6 +308,7 @@
 	display: block;
 	line-height: 18px;
 	text-align: center;
+	color:#595959;
 }
 .rate{
 	display: block;
@@ -307,6 +316,9 @@
 	text-align: center;
 	font-size: 12px;
 	color: #8c8c8c;
+}
+.selected .rate{
+	color: #000;
 }
 /*数量*/
 .pro_num dl{
@@ -344,7 +356,7 @@
 	right: 0;
 	color: #000;
 }
-.counter .num{
+.counter .num_text{
 	display: inline-block;
 	position: absolute;
 	top: 0;
@@ -373,22 +385,104 @@
 	
 	text-align: center;	
 }
-.add_shopcar .add_car{
+.add_shopcar .take_it{
 	margin-right: 22px;
 	background: #27b3ff;
 	border:1px solid transparent;
 	color:#fff;
 }
-.add_shopcar .add_car:hover{
+.add_shopcar .take_it:hover{
 	background: #23A0E5;
 }
-.add_shopcar .take_it{
+.add_shopcar .add_cart{
 	color: #27b3ff;
 	background: #fff;
 	border:1px solid #27B3FF;
 }
-.add_shopcar .take_it:hover{
+.add_shopcar .add_cart:hover{
 	background:#EEF8FD ;
+}
+/* 加入购物车蒙版 */
+.mask{
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.5;
+    z-index: 2;
+    position: absolute;
+    top:0;
+    display: none;
+}
+.tanchuang{
+    width: 500px;
+    height: 400px;
+    background-color: white;
+    position: fixed;
+    top:50%;
+    left: 50%;
+    margin-left: -250px;
+    margin-top: -200px;
+    display: none;
+    z-index: 20;
+}
+.close{
+    width: 100%;
+    height: 40px;
+    background: #353537;
+}
+.close span{
+    display: block;
+    width:20px;
+    height: 20px; 
+    background: white;
+    float: right;
+    text-align: center;
+    line-height: 20px;
+    margin-top: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.tanchuang .add{
+    margin-top: 100px;
+    text-align: center;
+}
+.tanchuang .add p{
+    margin-bottom: 10px;
+}
+.tanchuang .add span{
+	color:#27b3ff;
+	font-size: 14px;
+	font-weight: bold;
+}
+.go{
+    margin-left: 140px;
+    margin-top: 70px;
+}
+.go a{
+    display: block;
+    width: 100px;
+    height: 40px;
+    float: left;
+    line-height: 40px;
+    text-align: center;
+}
+.goOn{
+    display: block;
+    width: 100px;
+    height: 40px;
+    float: left;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid #fb9d46;
+    color: #fb9d46; 
+    margin-right: 20px;
+    background: white;
+    cursor: pointer;
+}
+.go a:last-child{
+    height: 40px;
+    background: #fb9d46;
+    color: white; 
 }
 
 /* 产品主体部分 */

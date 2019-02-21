@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>购物车</title>
+    <link rel="icon" href="favicon.ico" mce_href="favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" type="text/css" href="css/reset.css"/>
     <link rel="stylesheet" type="text/css" href="css/shop_car.css"/>
     <link rel="stylesheet" type="text/css" href="css/common.css"/>
@@ -33,15 +34,178 @@
     </header>
     <!-- 主体部分 -->
     <main id="main">
+        <!-- 用户未登录提示 -->
+        <!-- <div class="not_login_tip">
+            <i class="icon">i</i>您还没有登录！登录后可显示您账号中已加入的商品哦~
+            <a href="login.html" target="_blank" class="btn_link_login">去登陆</a>
+            <div class="btn_close"></div>
+        </div> -->
+        <!-- 购物车主体部分 -->
         <div class="container">
-            <div class="cart_empty ">
+            <!-- 用户未登录不能购买商品 -->
+            <!-- <div class="cart_empty ">
                 <div class="cart_content">
                     <div class="cart_left"></div>
                     <div class="cart_right">
                         <div class="cart_title">您还没有登录！</div>
                         <div class="cart_hint">登录后可显示您账号中已加入的商品哦~</div>
-                        <div class="tips_btn"><a href="login.html" class="btn_login">去登陆</a></div>
+                        <div class="tips_btn"><a href="#" class="btn_login">去登陆</a></div>
                     </div>
+                </div>
+            </div> -->
+            <!-- 将商品加入购物车 -->
+            <table class="cart_header">
+                <tr>
+                    <td class="cart_select">
+                        <div class="select_all">
+                            <div class="mz_ck"></div>
+                            <span class="select_tit">全选</span>
+                        </div>
+                    </td>
+                    <td class="cart_price">单价(元)</td>
+                    <td class="cart_number">数量</td>
+                    <td class="cart_total">小计(元)</td>
+                    <td class="cart_ctrl edit">编辑</td>
+                </tr>
+            </table>
+            <ul class="cart_list">
+                <li class="cart_merchant">
+                    <div class="brand_tit">
+                        <div class="select_all">
+                            <div class="mz_ck"></div>
+                            <span class="select_tit">魅族</span>
+                        </div>
+                        <div class="select_fee">
+                            <span class="cart_free">已免邮费</span>
+                        </div>
+                    </div>
+                    <table class="cart_body">
+                        <!-- <tr class="cart_product">
+                            <td class="cart_select">
+                                <div class="mz_ck xz"></div>
+                                <a href="product_detail.html" class="product_link">
+                                    <img src="images/shop_cart/cart_pro1.png" alt="">
+                                </a>
+                                <a href="product_detail.html" class="product_link product_info">
+                                    <p class="product_name">Everyday 乐游系列 酷 MA 萌定制版</p>
+                                    <p class="product_color">黑色</p>
+                                </a>
+                            </td>
+                            <td class="cart_price">
+                                <p>
+                                    <span class="p_price">599.00</span>
+                                </p>
+                            </td>
+                            <td class="cart_number">
+                                <div class="num_edit">
+                                    <div class="editor">
+                                        <button class="num_minus disabled"></button>
+                                        <div class="show_num">
+                                            <input type="text" class="inp_num" value='1' />
+                                        </div>
+                                        <button class="num_add"></button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="cart_total">
+                                <span class="cart_price total">599.00</span>
+                            </td>
+                            <td class="cart_ctrl">
+                                <div class="product_remove"></div>
+                            </td>
+                        </tr>
+                        <tr class="cart_product">
+                            <td class="cart_select">
+                                <div class="mz_ck"></div>
+                                <a href="product_detail.html" class="product_link">
+                                    <img src="images/shop_cart/cart_pro2.png" alt="">
+                                </a>
+                                <a href="product_detail.html" class="product_link product_info">
+                                    <p class="product_name">Everyday 乐游系列 酷 MA 萌定制版</p>
+                                    <p class="product_color">黑色</p>
+                                </a>
+                            </td>
+                            <td class="cart_price">
+                                <p>
+                                    <span class="p_price">599.00</span>
+                                </p>
+                            </td>
+                            <td class="cart_number">
+                                <div class="num_edit">
+                                    <div class="editor">
+                                        <button class="num_minus disabled"></button>
+                                        <div class="show_num">
+                                            <input type="text" class="inp_num" value='1' />
+                                        </div>
+                                        <button class="num_add"></button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="cart_total">
+                                <span class="cart_price total">599.00</span>
+                            </td>
+                            <td class="cart_ctrl">
+                                <div class="product_remove"></div>
+                            </td>
+                        </tr>
+                        <tr class="cart_product">
+                            <td class="cart_select">
+                                <div class="mz_ck"></div>
+                                <a href="product_detail.html" class="product_link">
+                                    <img src="images/shop_cart/cart_pro3.png" alt="">
+                                </a>
+                                <a href="product_detail.html" class="product_link product_info">
+                                    <p class="product_name">Everyday 乐游系列 酷 MA 萌定制版</p>
+                                    <p class="product_color">黑色</p>
+                                </a>
+                            </td>
+                            <td class="cart_price">
+                                <p>
+                                    <span class="p_price">599.00</span>
+                                </p>
+                            </td>
+                            <td class="cart_number">
+                                <div class="num_edit">
+                                    <div class="editor">
+                                        <button class="num_minus disabled"></button>
+                                        <div class="show_num">
+                                            <input type="text" class="inp_num" value='1' />
+                                        </div>
+                                        <button class="num_add"></button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="cart_total">
+                                <span class="cart_price total">599.00</span>
+                            </td>
+                            <td class="cart_ctrl">
+                                <div class="product_remove font_show"></div>
+                            </td>
+                        </tr> -->
+                    </table>
+                </li>
+            </ul>
+        </div>
+        <!-- 购物车底部 -->
+        <div class="cart_footer">
+            <div class="cfooter_inner container">
+                <div class="cartfooter_left">
+                    <div class="select_all">
+                        <div class="mz_ck"></div>
+                        <span class="select_tit">全选</span>
+                    </div>
+                    <span class="del_select">删除选中的商品</span>
+                    <span class="cart_footer_count">
+                        共<span class="cart_total_num">3</span>件商品，已选择
+                        <span class="cart_check_num blue">0</span>件
+                    </span>
+                </div>
+                <div class="cartfooter_right">
+                    <div class="cart_footer_sum">
+                        合计(不含运费)：
+                        <span class="cart_footer_total hj_price">0.00</span>
+                    </div>
+                    <a href="javascript:;" target="_blank" class="btn_acount">去结算</a>
                 </div>
             </div>
         </div>
@@ -146,5 +310,7 @@
             </div>
         </div>
     </div>
+    <script src="js/jquery-3.3.1.min.js"></script> 
+    <script src="js/cart.js"></script>
 </body>
 </html>

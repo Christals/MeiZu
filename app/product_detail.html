@@ -3,10 +3,10 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>产品详情页</title>
+		<link rel="icon" href="favicon.ico" mce_href="favicon.ico" type="image/x-icon"/>
 		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
 		<link rel="stylesheet" type="text/css" href="css/common.css"/>
 		<link rel="stylesheet" type="text/css" href="css/product_detail.css"/>
-		
 	</head>
 	<body>
 		<!--头部-->
@@ -52,51 +52,7 @@
 	                <form class="search">
 						<input type="text" class="inp" placeholder="魅族 16th"/>
 						<input type="submit" class="btn" value=""/>
-						<div class="mz-menu">
-							<ul class="menu-list">
-									<li class="menu-item" tabindex="-1">
-									<span class="menu-name" title="魅族 Note8">魅族 Note8</span>
-									<span class="menu-num">约 3 种</span>
-									</li>
-									
-									<li class="menu-item" tabindex="-1">
-									<span class="menu-name" title="16X">16X</span>
-									<span class="menu-num">约 3 种</span>
-									</li>
-									
-									<li class="menu-item" tabindex="-1">
-									<span class="menu-name" title="魅族 X8">魅族 X8</span>
-									<span class="menu-num">约 3 种</span>
-									</li>
-									
-									<li class="menu-item" tabindex="-1">
-									<span class="menu-name" title="魅族 V8">魅族 V8</span>
-									<span class="menu-num">约 4 种</span>
-									</li>
-									
-									<li class="menu-item" tabindex="-1">
-									<span class="menu-name" title="耳机">耳机</span>
-									<span class="menu-num">约 14 种</span>
-									</li>
-									
-									<li class="menu-item" tabindex="-1">
-									<span class="menu-name" title="蓝牙 耳机">蓝牙 耳机</span>
-									<span class="menu-num">约 6 种</span>
-									</li>
-									
-									<li class="menu-item" tabindex="-1">
-									<span class="menu-name" title="魅族 16th">魅族 16th</span>
-									<span class="menu-num">约 6 种</span>
-									</li>
-									
-									<li class="menu-item" tabindex="-1">
-									<span class="menu-name" title="移动电源">移动电源</span>
-									<span class="menu-num">约 1 种</span>
-									</li>	
-						  </ul>
-						  </div>
 					</form>
-					
 	                <a href="login.html" class="login"></a>
 	                <a href="shop_car.html" class="shop_car"></a>
 	            </section>
@@ -227,23 +183,23 @@
 							<dl class="dl_attr">
 								<dt class="css_dt">颜色分类</dt>
 								<dd>
-									<a href="#">
+									<a class="selected" href="javascript:;">
 										<img src="images/product/phone_white.png"/>
 										<span>汝窑白</span>
 									</a>
-									<a href="#">
+									<a href="javascript:;">
 										<img src="images/product/phone_gold.png"/>
 										<span>晨曦金</span>
 									</a>
-									<a href="#">
+									<a href="javascript:;">
 										<img src="images/product/phone_black.png"/>
 										<span>砚墨紫</span>
 									</a>
-									<a href="#">
+									<a href="javascript:;">
 										<img src="images/product/phone_blue.png"/>
 										<span>云山蓝</span>
 									</a>
-									<a href="#">
+									<a href="javascript:;">
 										<img src="images/product/phone_purple.png"/>
 										<span>烟金紫</span>
 									</a>
@@ -255,15 +211,15 @@
 							<dl class="dl_attr">
 								<dt class="css_dt">花呗分期</dt>
 								<dd>
-									<a href="#">
+									<a href="javascript:;">
 										<span class="periods">¥613.11×3期</span>
 										<span class="rate">含手续费13.78/期</span>
 									</a>
-									<a href="#">
+									<a href="javascript:;">
 										<span class="periods">¥313.14×6期</span>
 										<span class="rate">含手续费13.48/期</span>
 									</a>
-									<a href="#">
+									<a href="javascript:;">
 										<span class="periods">¥161.06×12期</span>
 										<span class="rate">含手续费11.23/期</span>
 									</a>
@@ -276,17 +232,18 @@
 								<dt class="css_dt">数&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;量</dt>
 								<dd>
 									<div class="counter">
-										<a href="#" class="minus">-</a>
-										<input type="text" class="num" value="1" />
-										<a href="#" class="add">+</a>
+										<a href="javascript:;" class="minus">-</a>
+										<input type="text" class="num_text" value="1" />
+										<!-- <a href="javascript:;" class="num_text">1</a> -->
+										<a href="javascript:;" class="add">+</a>
 									</div>
 								</dd>
 							</dl>
 						</div>
 						<!-- 加入购物车 -->
 						<div class="add_shopcar">
-							<a href="shop_car.html" target="_blank" class="add_car">加入购物车</a>
-							<a href="#" class="take_it">立即购买</a>
+							<a href="login.html" target="_blank" class="take_it">立即购买</a>
+							<a href="javascript:;" class="add_cart" target="_blank">加入购物车</a>
 						</div>
 					</div>
 				</div>
@@ -463,9 +420,60 @@
 				</div>
 			</div>
 		</div>
-		<script src="js/countdown.js"></script>
+		<!-- 在滑动屏幕时商品信息导航始终显示在屏幕上 -->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/posfixed.js"></script>
 		<script>
-			countDown.init('.notice');
+			$(document).ready(function () {
+				$("#category").posfixed({
+					distance: 0,
+					pos: "top",
+					type: "while",
+					hide: false,
+				});             
+			});
+		</script>
+		<!-- 加入购物车 -->
+		<script src="js/product_detail.js"></script>
+		<!-- <div class="mask"></div> -->
+		<div class="tanchuang">
+			<div class="close">
+				<span class="close1">x</span>
+			</div>
+			<div class="add">
+				<p>商品已成功添加到购物车</p>
+				<p>购物车一共有<span id="mun">0</span>件商品</p>
+			</div>
+			<div class="go">
+				<button class="goOn">继续购物</button>
+				<a href="shop_car.html" target="_blank">去购物车</a>
+			</div>
+		</div>
+
+		<script>
+			$(".close1").click(function(){
+				$(".tanchuang").css("display","none");
+				$(".mask").css("display","none");
+			});
+			$(".goOn").click(function(){
+				$(".tanchuang").css("display","none");
+				$(".mask").css("display","none");
+			});
+				
+			var nums = parseInt($('.num_text').text());;
+			var spans = $("#mun");
+			$(".add_cart").click(function(){
+				$(".mask").css("display","block");
+				$(".tanchuang").css("display","block");
+				nums = $("#mun").html();
+				nums++;
+				spans.html(nums);
+			});
+				
+			$(".mask").click(function(){
+				$(".tanchuang").css("display","none");
+				$(".mask").css("display","none");
+			});		
 		</script>
 	</body>
 </html>

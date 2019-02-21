@@ -20,11 +20,6 @@ var wrapper=(function(){
             for (var i = 0; i < $tipLi.length; i++) {
                 $tipLi[i].index = i ;
             }
-            //获取和克隆第一张和最后一张
-            // $firstImg=$imgBox.firstElementChild;
-            // $lastImg=$imgBox.lastElementChild;
-            // $imgBox.appendChild($firstImg.cloneNode(true));
-            // $imgBox.insertBefore($lastImg.cloneNode(true),$firstImg);
             this.event();
             //console.log($imgLi);
         },
@@ -70,4 +65,79 @@ var wrapper=(function(){
     }
 
 }())
+var subnav=(function(){
+    var $box,$navul,$navLi,target,arr = [],index,timer=null;
+    return{
+        init(){
+            //获取大盒子
+            $box=document.querySelector('#header');
+            //获取导航ul
+            $navul=document.querySelector('.nav ul');
+            //获取导航所有的li
+            $navLi =$navul.children;
+            //获取二级导航的集合
+            $subnav=document.querySelectorAll('.sub_nav');
+            // for (var j = $subnav.length-1; j < $navLi.length - 1; j++) { 
+            //     $last_subnav =$subnav[$subnav.length-1];
+            //     $section=document.createElement('section');
+            //     $section.className='sub_nav';
+            //     $sub.insertBefore($section,$last_subnav);
+            // }
+            //给每个下拉二级菜单加上类名
+            for (var i = 0; i < $subnav.length; i++) {
+                $subnav[i].classList.add('hidden') ;           
+                // $subnav[i].style.display = 'none' ;
+            }
+            //给每个有nav的li加上index属性
+            
+            for (var i = 0; i < $navLi.length; i++) {
+                if ($navLi[i].className == 'shownav' ) {
+                    arr.push($navLi[i]);  
+                }
+            }
+            for (var i = 0; i < arr.length; i++) {
+                $navLi[i].index = i;
+                
+            }
+            this.event();
+            $subnav=document.querySelectorAll('.sub_nav');
+            console.log(arr);
+        },
+        event(){
+            var self = this;
+            $navul.onmouseover = function(e){
+                e = e || window.event;
+                target = e.target || srcElement;
+                index = target.index;
+                console.log(index);
+                target.onmouseenter = function (){
+                    if (target.className == 'shownav') {
+                        self.hidden();
+                    }
+                    else{
+                        self.hidden();
+                    }
+                }    
+            }
+            $navul.onmouseleave = function(e){
+                e = e || window.event;
+                target = e.target || srcElement;
+                index = target.index;
+                target.onmouseleave =function (e){
+                    if (target.className == 'shownav') {
+                        self.hidden();
+                    }
+                }
+                console.log(target); 
+            }
+        },
+        show(){
+            $subnav[index].classList.replace('hidden','show') ; 
+            //move($imgLi[index],'zIndex',1,1000);
+        },
+        hidden(){
+            $subnav[index].classList.replace('show','hidden') ; 
+        }
+    }
 
+}())
