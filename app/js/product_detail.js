@@ -46,6 +46,7 @@ $('.price_bystage a').click(function(e) { // 在页面任意位置点击而触�
 $('.add_shopcar').delegate('a', 'click', function(e) {
     console.log(1);
     var target = $(event.target);
+    var data;
     console.log(target);
     console.log(target.prop('tagName') == 'A');	//add_cart	
     if(target.prop('tagName') == 'A') {
@@ -53,6 +54,7 @@ $('.add_shopcar').delegate('a', 'click', function(e) {
             var arr = JSON.parse(localStorage.getItem('meizu'))
             var num = 1;
             var fool;
+            
             var amount = parseInt($(".num_text").attr("value"));
             //var amount = parseInt($(".num_text").text());
             var price = parseInt($('.pri_num').text());

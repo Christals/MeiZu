@@ -24,12 +24,12 @@ $(function() {
 	// 把localStorage中的商品数据渲染到页面中
 	if(localStorage.getItem('meizu')) {
 		var i = localStorage.getItem('meizu');
-		arr = JSON.parse(i);
+		var arr = JSON.parse(i);
         var xz_num = arr.length; //获取商品数量
         var qx_num = 0; //声明有几个选中商品
         var b = true;//判断是否编辑
 		for(var i = 0; i < arr.length; i++) {
-			obj = arr[i];
+			var obj = arr[i];
             // console.log(obj)
             var product =`
             <tr class="cart_product">

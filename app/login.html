@@ -84,10 +84,10 @@
                 success(data) {
                     data = JSON.parse(data);
                     if(data.code == 200) {
-                        // var username = data.data.name;
-                        // localStorage.name = username;
-                        //  location.href = 'manager.html';
-                        location.href = 'index.html';
+                        var username = data.data.name;
+                        localStorage.name = username;
+                         location.href = 'manager.html';
+                        //location.href = 'index.html';
                         
                     } else {
                         alert(data.msg);
