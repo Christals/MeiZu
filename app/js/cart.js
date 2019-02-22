@@ -1,22 +1,23 @@
 // 根据勾选的商品的数量计算总价
 function fn() {
-    var $xz = document.querySelectorAll('.xz');
+    var $xz = $('.xz');
 	var priceAll = 0;
-	console.log($xz);
+	//console.log($xz);
 	for(var k = 0; k < $xz.length; k++) {
-		console.log($xz[k].className == 'iconfont icon-check Gou active');
-		if($xz[k].className == 'iconfont icon-check Gou active') {
-			var tt = $($xz[k]);
-			var jiage = tt.parent().parent().find('.shang_price').text();
-			var shuLiang = tt.parent().parent().find('.goods-num').text();
-			var jiaQian = Number(jiage) * Number(shuLiang);
-			var num5 = jiaQian;
-			console.log(num5);
-			priceAll += num5;
+		//console.log($xz[k].className == 'mz_ck xz checked');
+		if($xz[k].className == 'mz_ck xz checked') {
+			var $t = $($xz[k]);
+			var single_price = $t.parent().parent().find('.p_price').text();
+			var sp_number = $t.parent().parent().find('.inp_num').text();
+			//var zj_total = (Number(single_price) * parseInt(sp_number)).toFixed(2);
+			var zj_total = Number(single_price) * Number(sp_number);
+			//var num_sub = zj_total;
+			//console.log(zj_total);
+			priceAll += zj_total;
 		}
 	}
-	console.log(priceAll);
-    $('.hj_price').html(priceAll); //总价
+	//console.log(priceAll);
+	$(".hj_price").html(priceAll);//总价
 }
 
 $(function() {
@@ -81,7 +82,7 @@ $(function() {
             }
 			target.next().children().html(num);
 			target.parent().parent().parent().next().children().html(target.next().text() * target.parent().parent().parent().prev().children().text())
-			//fn();
+			fn();
 		})
 		// 点击加商品
 		$('.num_add').on('click', function() {
@@ -90,21 +91,23 @@ $(function() {
 			num++;
 			target.prev().children().html(num);
 			target.parent().parent().parent().next().children().html(target.prev().text() * target.parent().parent().parent().prev().children().text())
-			//fn()
+			fn();
         })
         // 全选商品
 		$('.select_all').click(function() {
-			$('.mz_ck').toggleClass('checked');
-			if($('.mz_ck').attr('class') == 'mz_ck checked') {
+			$('.select_all .mz_ck').toggleClass('checked');
+			if($('.select_all .mz_ck').attr('class') == 'mz_ck checked') {
+				$('.cart_select .xz').addClass('checked');
 				qx_num = arr.length;
-				//console.log(qx_num);
 				$('.cart_check_num').html(qx_num);
-				//fn();
+				fn();
 
-			}  else if($('.mz_ck').attr('class') == 'mz_ck') {
+			}  
+			else if($('.select_all .mz_ck').attr('class') == 'mz_ck') {
+				$('.cart_select .xz').removeClass('checked');
 				qx_num = arr.length;
 				$('.cart_check_num').html(qx_num);
-				//fn();
+				fn();
 			}
 			//fn1();
         })
@@ -117,14 +120,20 @@ $(function() {
             // 单选初始值
 			var dx_num = 0;
 			for(var i = 0; i < $cart_xz.length; i++) {
-				//console.log($cart_xz[i]);
-				//console.log($cart_xz[i].className == 'mz_ck xz checked');
 				if($cart_xz[i].className == 'mz_ck xz checked') {
 					dx_num += 1;
-					console.log(dx_num);
+					//console.log(dx_num);
 				}
 			}
-			//fn();
+			if(dx_num == $cart_xz.length){
+				$('.select_all .mz_ck').addClass('checked');
+				fn();
+			}
+			if($(target).attr('class') == 'mz_ck xz'){
+				$('.select_all .mz_ck').removeClass('checked');
+				fn();
+			}
+			fn();
 			$('.cart_check_num').html(dx_num);
         })
         // 点击编辑改变样式
@@ -147,7 +156,7 @@ $(function() {
 				target.parent().parent().remove();
 				xz_num--;
 				$('.cart_total_num').html(xz_num);
-				//fn();
+				fn();
 				//fn1();
 			}
 		})
