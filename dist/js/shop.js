@@ -1,1 +1,0 @@
-"use strict";var shop={init:function(){this.getJson(),this.event()},event:function(){},getJson:function(){var n=this;sendAjax("json/shop.json",{success:function(t){n.insertData(JSON.parse(t))}})},insertData:function(t){200==t.code?t.data:alert("你没有获取数据的权限")}};shop.init();

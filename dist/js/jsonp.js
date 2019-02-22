@@ -1,1 +1,0 @@
-"use strict";function sendJonp(e,n){var t=document.createElement("script"),c=e.includes("?")?"&":"?";for(var d in e+=c+"_="+Date.now(),n)e+="&"+d+"="+n[d];t.src=e,document.body.appendChild(t)}
